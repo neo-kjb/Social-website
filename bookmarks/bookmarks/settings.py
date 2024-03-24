@@ -1,3 +1,7 @@
+from dotenv import load_dotenv
+import os
+
+load_dotenv()
 """
 Django settings for bookmarks project.
 
@@ -142,3 +146,7 @@ AUTHENTICATION_BACKENDS = [
     "account.authentication.EmailAuthBackend",
     "social_core.backends.google.GoogleOAuth2",
 ]
+
+
+SOCIAL_AUTH_GOOGLE_OAUTH2_KEY = os.environ.get("GOOGLE_CLIENT_ID")
+SOCIAL_AUTH_GOOGLE_OAUTH2_SECRET = os.environ.get("GOOGLE_CLIENT_SECRET")
