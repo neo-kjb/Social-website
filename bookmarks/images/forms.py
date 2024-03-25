@@ -1,4 +1,5 @@
 from django import forms
+from django.urls import reverse
 from .models import Image
 from django.core.files.base import ContentFile
 from django.utils.text import slugify
